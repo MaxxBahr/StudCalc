@@ -3,10 +3,8 @@ package operations;
 import java.util.Scanner;
 
 public class StandardCalc {
-	private int decimals;
 	private float brueche;
 	private String funktionen;
-	private float exponent;
 	private double ergebnisexpo;
 
 	public StandardCalc(int decimals, int decimal) {
@@ -66,5 +64,13 @@ public class StandardCalc {
 	
 	public double getErgebnisexpo() {
 		return ergebnisexpo;
+	}
+
+	public float getBrueche() {
+		return brueche;
+	}
+
+	public void setBrueche(float brueche) {
+		this.brueche = brueche;
 	}
 }
