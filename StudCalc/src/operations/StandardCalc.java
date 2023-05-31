@@ -8,14 +8,17 @@ public class StandardCalc {
 	private String funktionen;
 
 	public StandardCalc(int decimals, int decimal) {
-		operation(decimals, decimal);
+		stdoperation(decimals, decimal);
 	}
 
 	public StandardCalc(String funktionen) {
 
 	}
 
-	private void operation(int decimals, int decimal) {
+	public StandardCalc() {
+	}
+
+	public void stdoperation(int decimals, int decimal) {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("0 = Addieren");
@@ -25,17 +28,29 @@ public class StandardCalc {
 		System.out.println("_________________________________________________________________________________");
 		System.out.print("Bitte Operation waehlen: ");
 		int operation = scanner.nextInt();
+		scanner.close();
 		switch (operation) {
 		case 0:
 			System.out.println("Ergebnis der Addition: " + (decimals + decimal));
+			break;
 		case 1:
 			System.out.println("Ergebnis der Multiplikation: " + (decimals * decimal));
+			break;
 		case 2:
 			System.out.println("Ergebnis der Subtraktion: " + (decimals - decimal));
+			break;
 		case 3:
-			System.out.println("Ergebnis der Division: " + (decimals / decimal));
+			System.out.println("Ergebnis der Division: " + Float.valueOf(decimals / decimal));
+			break;
+		default:
+			System.out.println("Operation nicht verfuegbar!");
+			break;
 
 		}
-
 	}
+	public void bruchtodec(String bruch) {
+		Bruch bru = new Bruch(bruch);
+		System.out.println("Bruch als Dezimalzahl: " + (bru.getZaehler() / bru.getNenner()));
+	}
+	
 }

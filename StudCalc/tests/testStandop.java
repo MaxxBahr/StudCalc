@@ -6,7 +6,8 @@ class testStandop {
 
 	@Test
 	void test() {
-		StandardCalc stat = new StandardCalc(12, 14);
+		StandardCalc stat = new StandardCalc();
+		stat.bruchtodec("3/4");
 	}
 
 }

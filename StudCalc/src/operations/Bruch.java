@@ -1,8 +1,8 @@
 package operations;
 
 public class Bruch {
-	private int zaehler;
-	private int nenner;
+	private float zaehler;
+	private float nenner;
 
 	public Bruch(String Bruch) {
 		strtobr(Bruch);
@@ -24,7 +24,7 @@ public class Bruch {
 		}
 	}
 
-	public int getZaehler() {
+	public float getZaehler() {
 		return zaehler;
 	}
 
@@ -32,7 +32,7 @@ public class Bruch {
 		this.zaehler = zaehler;
 	}
 
-	public int getNenner() {
+	public float getNenner() {
 		return nenner;
 	}
 
