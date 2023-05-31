@@ -7,7 +7,9 @@ class testStandop {
 	@Test
 	void test() {
 		StandardCalc stat = new StandardCalc();
-		stat.bruchtodec("3/4");
+		stat.setErgebnisexpo(3, 2);
+		System.out.println("Exponieren: "+ stat.getErgebnisexpo());
+		
 	}
 
 }

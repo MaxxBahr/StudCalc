@@ -6,6 +6,8 @@ public class StandardCalc {
 	private int decimals;
 	private float brueche;
 	private String funktionen;
+	private float exponent;
+	private double ergebnisexpo;
 
 	public StandardCalc(int decimals, int decimal) {
 		stdoperation(decimals, decimal);
@@ -53,4 +55,16 @@ public class StandardCalc {
 		System.out.println("Bruch als Dezimalzahl: " + (bru.getZaehler() / bru.getNenner()));
 	}
 	
+	public void setBrueche(String bruch) {
+		Bruch bru = new Bruch(bruch);
+		this.brueche = bru.getZaehler() / bru.getNenner();
+	}
+	
+	public void setErgebnisexpo(float basis, float exponent) {
+		this.ergebnisexpo = Math.pow(basis, exponent);
+	}
+	
+	public double getErgebnisexpo() {
+		return ergebnisexpo;
+	}
 }
