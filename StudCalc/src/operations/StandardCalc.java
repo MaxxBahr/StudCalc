@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class StandardCalc {
 	private float brueche;
-	private String funktionen;
 	private double ergebnisexpo;
 
 	public StandardCalc(int decimals, int decimal) {
